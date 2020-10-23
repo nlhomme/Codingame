@@ -38,7 +38,13 @@ temperatureArray.forEach {
     // (especially if there is one postive number and one negative number)
     // then the postitive entry wins
     if abs(0-$0) == abs(0-candidate){
-        candidate = abs($0)
+        if $0 < 0, candidate < 0 {
+            candidate = $0
+        } else if $0 < 0, candidate < 0 {
+            candidate = abs($0)
+        } else {
+            candidate = abs($0)
+        }
         print("candidate = \($0)", to: &errStream)
     }
 
