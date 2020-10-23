@@ -12,8 +12,8 @@ public var errStream = StderrOutputStream()
  **/
 
 var temperatureArray = [Int]()
-var candidate = 999
-var result = 999
+var candidate = 9999
+var result = 9999
 
 let n = Int(readLine()!)! // the number of temperatures to analyse
 for i in ((readLine()!).split(separator: " ").map(String.init)) {
