@@ -34,21 +34,16 @@ temperatureArray.forEach {
 
     print("The difference between 0 and \($0) is \(abs(0-$0))", to: &errStream)
 
-    // If two array entries 
-    // (one postive and one negative)
-    // are both close to zero then the postitive entry wins
-    if abs(0-$0) == abs(candidate){
+    // If two array entries are both close to zero 
+    // (especially if there is one postive number and one negative number)
+    // then the postitive entry wins
+    if abs(0-$0) == abs(0-candidate){
         candidate = abs($0)
         print("candidate = \($0)", to: &errStream)
     }
 
-    // If the array entry is smaller than the candidate
-    // And the array entry and the candidate are both close to zero then the postitive entry wins
-    if abs(0-$0) < abs(candidate) {
-        if abs(0-$0) == abs(candidate){
-            candidate = abs($0)
-            print("candidate = \($0)", to: &errStream)
-        }
+    // If the array entry is closer to zero than the candidate then the entry wins
+    if abs(0-$0) < abs(0-candidate) {
             // Else the array entry wins
             candidate = $0
             print("candidate = \($0)", to: &errStream)
