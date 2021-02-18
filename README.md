@@ -1,2 +1,2 @@
 # Codingame
-Resolution of challenges using Swift on codingame.com
+Resolution of challenges with Swift on codingame.com
